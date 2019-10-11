@@ -16,14 +16,14 @@ CREATE TABLE products (
 SELECT * FROM products;
 
 INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("CD Player", "Electronics", 30, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Laptop", "Electronics", 1200, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Barbie Doll", "Toy", 12, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Connect Four", "Toy", 10, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Shirt", "Apparel", 50, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Pants", "Apparel", 75, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Pillow", "Home Decor", 25, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Dell Laptop", "Electronics", 1200, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Barbie Doll", "Toys & Games", 12, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Connect Four", "Toy & Games", 10, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Dress Shirt", "Men's Clothing", 50, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Green Pants", "Men's Clothing", 75, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Throw Pillow", "Home Decor", 25, 5);
 INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Throw Blanket", "Home Decor", 50, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Eye Liner", "Beauty", 10, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Lipstick", "Beauty", 15, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Eye Liner", "Health & Beauty", 10, 5);
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Lipstick", "Health & Beauty", 15, 5);
 
 SELECT * FROM products;
