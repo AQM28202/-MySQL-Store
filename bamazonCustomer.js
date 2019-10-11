@@ -27,7 +27,7 @@ connection.query("SELECT * FROM products", function (err, res) {
     inquirer.prompt([{
 		name: "product",
 		type: "input",
-		message: "What is the ID of the product that works best for you? [Changed your mind? Press Y]"
+		message: "What is the ID of the product that works best for you?"
 	},
 	{
 		name: "qty",
@@ -44,7 +44,7 @@ connection.query("SELECT * FROM products", function (err, res) {
 			connection.query('SELECT * FROM products WHERE ?', { item_id: productObj.product }, function (err, res) {
 				if (err) throw err;
 				// console.log(res)
-				if (res[0].stock_quantity > productObj.qty) {
+				if (res[0].stock_quantity >= productObj.qty) {
 
 					var cost = res[0].price * productObj.qty
 					console.log("-----------------------------------");
@@ -64,7 +64,7 @@ connection.query("SELECT * FROM products", function (err, res) {
 				}
 				else {
 					console.log("-----------------------------------");
-					console.log("Sorry, we do not have enough in stock. \nWe only have " + res[0].StockQuantity + " units of " + productObj.product + ". \nPlease retry your order. \nThank you!")
+					console.log("Sorry, we do not have enough in stock. \nWe only have " + res[0].stock_quantity + " units of " + productObj.product + ". \nPlease retry your order. \nThank you!")
 				}
 			})
 		}
