@@ -27,18 +27,18 @@ connection.query("SELECT * FROM products", function (err, res) {
     inquirer.prompt([{
 		name: "product",
 		type: "input",
-		message: "What is the ID of the product that works best for you?"
+		message: "Please Enter Product ID:"
 	},
 	{
 		name: "qty",
 		type: "input",
-		message: "You will claim your write-off later, so how many of this product did you have in mind?"
+		message: "Please enter QTY:"
 
 
 
 
 	}]).then(function (productObj) {
-		if (productObj.product.toUpperCase() == "Y") {
+		if (productObj.product.toUpperCase() == "X") {
 			connection.end();
 		} else {
 			connection.query('SELECT * FROM products WHERE ?', { item_id: productObj.product }, function (err, res) {
