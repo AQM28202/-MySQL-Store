@@ -13,7 +13,7 @@ CREATE TABLE products (
 
 
 
-select * from products;
+SELECT * FROM products;
 
 INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("CD Player", "Electronics", 30, 5);
 INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Laptop", "Electronics", 1200, 5);
