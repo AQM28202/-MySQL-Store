@@ -7,5 +7,5 @@ In this activity, you'll be creating an Amazon-like storefront with the MySQL sk
 Make sure you save and require the MySQL and Inquirer npm packages in your homework files--your app will need them for data input and storage.
 
 <video width="320" height="240" controls>
-  <source src="file:///Users/anthonymcpherson/Downloads/Oct%2016,%202019%204_47%20PM.webm" type="video/mp4">
+  <source src="video.webm" type="video/wemb">
 </video>
