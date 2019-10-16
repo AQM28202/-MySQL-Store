@@ -27,7 +27,7 @@ connection.query("SELECT * FROM products", function (err, res) {
     inquirer.prompt([{
 		name: "product",
 		type: "input",
-		message: "Please Enter Product ID:"
+		message: "Please Enter Product ID or [Press X to Cancel]"
 	},
 	{
 		name: "qty",
@@ -43,7 +43,6 @@ connection.query("SELECT * FROM products", function (err, res) {
 		} else {
 			connection.query('SELECT * FROM products WHERE ?', { item_id: productObj.product }, function (err, res) {
 				if (err) throw err;
-				// console.log(res)
 				if (res[0].stock_quantity >= productObj.qty) {
 
 					var cost = res[0].price * productObj.qty
@@ -52,11 +51,14 @@ connection.query("SELECT * FROM products", function (err, res) {
 
 					var newQty = res[0].stock_quantity - productObj.qty
 
+
+
 					connection.query("UPDATE products SET ? WHERE ?", [{
 						stock_quantity: newQty
 					},
 					{
 						product_name: productObj.product
+
 					}],
 
 						function (err, res) {
